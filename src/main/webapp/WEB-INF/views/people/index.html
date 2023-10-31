@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>??? ????</title>
+</head>
+<body>
+
+<div th:each="person : ${people}">
+    <a th:text="${person.getName()}" th:href="@{/people/{id}(id=${person.getId()})}" />
+</div>
+</body>
+</html>
